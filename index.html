@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haipriori Business Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .widget {
+            flex: 1 1 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+        }
+        .filters {
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Haipriori Business Dashboard</h1>
+    <div class="filters">
+        <label for="filter">Select Time Range:</label>
+        <select id="filter">
+            <option value="week">Last Week</option>
+            <option value="month">Last Month</option>
+            <option value="year">Last Year</option>
+        </select>
+        <button id="applyFilter">Apply</button>
+    </div>
+    <div class="container">
+        <div class="widget">
+            <h3>Financial Performance</h3>
+            <div id="financial-chart" class="chart"></div>
+        </div>
+        <div class="widget">
+            <h3>Compliance Tracking</h3>
+            <div id="compliance-chart" class="chart"></div>
+        </div>
+        <div class="widget">
+            <h3>Operational Insights</h3>
+            <div id="operations-chart" class="chart"></div>
+        </div>
+    </div>
+    <div id="notifications" style="padding: 20px;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
